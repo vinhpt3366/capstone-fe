@@ -1,10 +1,9 @@
-import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { RouteEnum } from '../src/common/common.enum';
 import AuthLayout from '../src/features/AuthLayout';
-import ClientLayout from './features/ClientLayout';
 import Dashboard from '../src/pages/admin/Dashboard';
 import Home from '../src/pages/client/Home';
+import ClientLayout from './features/ClientLayout';
 import Blog from './pages/client/Blog';
 import Catalogue from './pages/client/Catalogue';
 import Course from './pages/client/Course';

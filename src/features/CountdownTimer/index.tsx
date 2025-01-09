@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface TimeLeft {
   days: number;

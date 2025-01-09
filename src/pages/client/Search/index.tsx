@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import CourseCard from '@/features/CourseCard';
 import { useSearchParams } from 'react-router-dom';

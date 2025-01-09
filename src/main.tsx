@@ -1,12 +1,11 @@
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App';
 import i18next from 'i18next';
+import { createRoot } from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
+import App from './App';
 import { LanguageEnum } from './common/common.enum';
-import viTranslation from './translations/vi.json';
+import './index.css';
 import enTranslation from './translations/en.json';
-import React from 'react';
+import viTranslation from './translations/vi.json';
 
 i18next.init({
   interpolation: { escapeValue: false },

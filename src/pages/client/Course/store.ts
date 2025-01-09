@@ -50,7 +50,7 @@ const useCourseStore = create<CourseState>((set, get) => ({
         isLoading: false
       });
     } catch (error) {
-      set({ error: error.message, isLoading: false });
+      set({ error: error?.toString(), isLoading: false });
     } finally {
       globalLoading.setLoading(false);
     }

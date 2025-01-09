@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AppRouter } from './routes';
+import LoadingGlobal from './features/LoadingGlobal';
 import ScrollToTop from './features/ScrollToTop';
 import { ToastProvider } from './providers/ToastProvider';
-import LoadingGlobal from './features/LoadingGlobal';
+import { AppRouter } from './routes';
 const SUSPENSE_FALLBACK = null;
 const ROUTER_BASENAME = '/';
 

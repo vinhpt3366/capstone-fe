@@ -1,5 +1,3 @@
-import React from 'react';
-
 const brands = [
   { id: 1, name: 'Fort Dexon', logo: 'FORT DEXON' },
   { id: 2, name: 'Caley Peace', logo: 'CALEY PEACE' },

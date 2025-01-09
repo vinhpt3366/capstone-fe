@@ -56,7 +56,7 @@ export const useCourseDetailStore = create<CourseDetailState>((set) => ({
     } catch (error) {
       set({ error: 'Failed to register course', isLoading: false });
       console.error('Error registering course:', error);
-      toast.error(error.response.data);
+      toast.error('Error registering course');
     } finally {
       globalLoading.setLoading(false);
     }
@@ -78,7 +78,8 @@ export const useCourseDetailStore = create<CourseDetailState>((set) => ({
     } catch (error) {
       set({ error: 'Failed to unregister course', isLoading: false });
       console.error('Error unregistering course:', error);
-      toast.error(error.response.data);
+      toast.error('Error unregistering course');
+
       return false;
     } finally {
       globalLoading.setLoading(false);
