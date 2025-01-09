@@ -12,6 +12,10 @@
     "types": ["node"],
     "typeRoots": ["./node_modules/@types"],
     "target": "ES6",
-    "module": "commonjs"
+    "module": "commonjs",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
