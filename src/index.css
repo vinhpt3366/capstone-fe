@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto px-4 sm:px-6 md:w-4/5 lg:max-w-[1200px];
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.carousel {
+  overflow: hidden;
+  background-image: url(../images/pic2.png);
+  background-position: top;
+  background-size: 100%;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: linear-gradient(to right, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 10;
+}
+
+.group:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #ffffff;
+  text-decoration: none;
+  transition: background 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease, padding-left 0.4s ease;
+}
+
+.submenu a:hover,
+.submenu a:active {
+  background: linear-gradient(to right, #ec4899, #f97316, #ec4899);
+  background-size: 200%;
+  background-position: right;
+  color: #ffffff;
+  padding-left: 20px;
+  box-shadow: 0 0 15px rgba(245, 95, 141, 0.5);
+}
+
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex; 
+  width: max-content; 
+  animation: infiniteScroll 60s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+  animation-play-state: running;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused; 
+}
+
